@@ -44,6 +44,13 @@ def main():
                 print(f"Game over!")
                 return
                 # exit()
+            for shot in shots:
+                if asteroid.colliding(shot):
+                    shot.kill()
+                    asteroid.split()
+
+
+
     
         screen.fill("pink")
 
